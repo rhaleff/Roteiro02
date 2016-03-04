@@ -21,18 +21,18 @@ public class TraduzirFrancesActivity extends AppCompatActivity {
         if(cor.equalsIgnoreCase("amarelo")){
             trad.setText("JAUNE");
             trad.setTextColor(Color.YELLOW);
-            trad.setBackgroundColor(Color.GRAY);
+            
         }
 
         else if (cor.equalsIgnoreCase("vermelho")){
             trad.setText("ROUGE");
             trad.setTextColor(Color.RED);
-            trad.setBackgroundColor(Color.GRAY);
+
 
         }else{
             trad.setText("BLEU");
             trad.setTextColor(Color.BLUE);
-            trad.setBackgroundColor(Color.GRAY);
+
         }
     }
 }

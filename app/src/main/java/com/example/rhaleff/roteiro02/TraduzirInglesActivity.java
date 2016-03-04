@@ -21,17 +21,16 @@ public class TraduzirInglesActivity extends AppCompatActivity {
         if(cor.equalsIgnoreCase("amarelo")){
             trad.setText("YELLOW");
             trad.setTextColor(Color.YELLOW);
-            trad.setBackgroundColor(Color.GRAY);
+            
         }
 
         else if (cor.equalsIgnoreCase("vermelho")){
             trad.setText("RED");
             trad.setTextColor(Color.RED);
-            trad.setBackgroundColor(Color.GRAY);
+
         }else{
             trad.setText("BLUE");
             trad.setTextColor(Color.BLUE);
-            trad.setBackgroundColor(Color.GRAY);
         }
     }
 }

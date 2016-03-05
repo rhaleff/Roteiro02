@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class TraduzirFrancesActivity extends ActionBarActivity {
@@ -20,8 +21,6 @@ public class TraduzirFrancesActivity extends ActionBarActivity {
             actionBar.setTitle("Tradução em Francês");
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
-
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -44,5 +43,13 @@ public class TraduzirFrancesActivity extends ActionBarActivity {
             trad.setTextColor(Color.BLUE);
 
         }
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+        return super.onContextItemSelected(item);
     }
 }

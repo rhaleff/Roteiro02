@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 b.putString("cor",cor);
                 intent.putExtras(b);
                 startActivity(intent);
+                finish();
             }
 
             else{

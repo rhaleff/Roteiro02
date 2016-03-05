@@ -6,6 +6,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class TraduzirInglesActivity extends ActionBarActivity {
@@ -14,12 +16,13 @@ public class TraduzirInglesActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_traduzir_ingles);
-
+//adicionando botão voltarInicio
         ActionBar actionBar = getSupportActionBar();
         if(actionBar!=null){
             actionBar.setTitle("Tradução em Inglês");
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+//fim-adicionar botão voltar
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -41,4 +44,14 @@ public class TraduzirInglesActivity extends ActionBarActivity {
             trad.setTextColor(Color.BLUE);
         }
     }
+//açao do botão
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+        return super.onContextItemSelected(item);
+    }
+
+
 }
